@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        margin: 20px;
+        height: 90vh;
+        box-sizing: border-box;
+      }
+
+      .form-container {
+      	font-family: "DM Serif Text", serif;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 90%;
+        /* Batasi lebar maksimal */
+        margin: auto;
+        /* Pusatkan elemen */
+        font-size: clamp(12px, calc(1.25em - 1vw), 24px)
+      }
+
+      .form-input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .yes-button,
+      .no-button {
+        padding: 5px;
+        margin: 5px;
+      }
+
+      .form-question {
+        padding: 10px;
+        margin: auto;
+        width: 50%;
+      }
+
+      .form-image {
+        width: 50%;
+        height: 300px;
+        /* Tambahkan tinggi */
+        background-image: url("https://th.bing.com/th/id/OIG3.8TNwQzgUzavLHaCpTZeV?w=1024&h=1024&rs=1&pid=ImgDetMain");
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px
+      }
+
+      @media (orientation: portrait) {
+        .form-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          max-width: 100%;
+          /* Batasi lebar maksimal */
+          margin: auto;
+          /* Pusatkan elemen */
+          font-size: clamp(12px, calc(1.25em - 1vw), 24px)
+        }
+
+        .form-image {
+          width: 100%;
+          height: 200px;
+        }
+
+        .form-question {
+          padding: 10px;
+          margin: auto;
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-image"></div>
+      <div class="form-question">
+        <h1> Apakah kamu merasa materi gelombang berjalan sulit untuk dipahami? </h1>
+        <div class="form-input">
+          <button class="yes-button">Ya</button>
+          <button class="no-button">Tidak</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
