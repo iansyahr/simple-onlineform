@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
       body {
         display: flex;
@@ -16,7 +16,6 @@
       }
 
       .form-container {
-      	font-family: "DM Serif Text", serif;
         display: flex;
         flex-direction: row-reverse;
         background-color: white;
@@ -27,24 +26,6 @@
         /* Batasi lebar maksimal */
         margin: auto;
         /* Pusatkan elemen */
-        font-size: clamp(12px, calc(1.25em - 1vw), 24px)
-      }
-
-      .form-input {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .yes-button,
-      .no-button {
-        padding: 5px;
-        margin: 5px;
-      }
-
-      .form-question {
-        padding: 10px;
-        margin: auto;
-        width: 50%;
       }
 
       .form-image {
@@ -55,6 +36,24 @@
         background-size: cover;
         background-position: center;
         border-radius: 10px
+      }
+
+      .form-quiz {
+        display:flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: auto;
+        width: 50%;
+      }
+
+      .form-question {
+        font-family: "DM Serif Text", serif;
+        font-size: clamp(12px, calc(1.25em - 1vw), 24px)
+      }
+
+      .form-input {
+        display:flex;
+        flex-direction:column
       }
 
       @media (orientation: portrait) {
@@ -86,8 +85,10 @@
   <body>
     <div class="form-container">
       <div class="form-image"></div>
-      <div class="form-question">
-        <h1> Apakah kamu merasa materi gelombang berjalan sulit untuk dipahami? </h1>
+      <div class="form-quiz">
+        <div class="form-question">
+          <h1> Apakah kamu merasa materi gelombang berjalan sulit untuk dipahami? </h1>
+        </div>
         <div class="form-input">
           <button class="yes-button">Ya</button>
           <button class="no-button">Tidak</button>
